@@ -5,15 +5,15 @@
     <title>Formulario</title>
   </head>
   <body style="background-color: rgb(0,255,255)">
-    <form class="" action="../Dynamics/valregex.php" method="get">
-      <fieldset>
-        <legend><h1>Ingrese sus datos</h1></legend>
-        <strong>Nombre:</strong><br><input type="text" name="nombre" value="" title="Ingrese un nombre válido." pattern="(^[A-ZÑÁÉÍÓÚ]{1}([a-zñáéíóú]+){2,})(\s[A-ZÑÁÉÍÓÚ]{1}([a-zñáéíóúy]+){2,})?$" required><br>
+    <form class="" action="../Dynamics/valregex.php" method="post">
+      <fieldset><!-- Abrir marco bonito -->
+        <legend><h1>Ingrese sus datos</h1></legend><!-- Leyenda de cuestionario -->
+        <strong>Nombre:</strong><br><input type="text" name="nombre" value="" title="Ingrese un nombre válido." pattern="(^[A-ZÑÁÉÍÓÚ]{1}([a-zñáéíóú]+){2,})(\s[A-ZÑÁÉÍÓÚ]{1}([a-zñáéíóúy]+){2,})?$" required><br><!-- Validación de nombre con regex -->
         <strong>Apellido Paterno:</strong><br><input type="text" name="apPat" value="" required><br>
         <strong>Apellido Materno:</strong><br><input type="text" name="apMat" value="" required><br>
         <strong>Fecha de nacimiento:</strong><br><input type="date" name="FechNac" value="" required><br>
         <strong>Colegio:</strong><br>
-        <select class="" name="colegio">
+        <select class="" name="colegio"><!-- Opciones de colegios -->
           <optgroup label="Colegios de Área I: Ciencias Físico-Matemáticas y de las Ingenierías">
             <option value="Física">Física</option>
             <option value="Informática">Informática</option>
@@ -50,7 +50,7 @@
             <option value="ETEC">ETEC</option>
           </optgroup>
         </select><br>
-        <strong>RFC:</strong><br><input type="text" name="RFC" value="" title="Ingrese un RFC válido." pattern="^[A-ZÑ&]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[A-Z0-9_]{3}$" required>
+        <strong>RFC:</strong><br><input type="text" name="RFC" value="" title="Ingrese un RFC válido." pattern="^[A-ZÑ&]{4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[A-Z0-9_]{3}$" required><!-- Validación de RFC con regex -->
         <br>
         <strong>Contraseña:</strong><br><input type="password" name="contraseña" value="" required><br>
         <input type="submit" name="" value="Enviar">
